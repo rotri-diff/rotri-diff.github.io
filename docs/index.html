@@ -75,7 +75,7 @@
           <div class="column has-text-centered">
             <h1 class="title is-1 publication-title" style="font-size: 35px;">
               <!-- <span style="color: #0f71bc;">De</span><span style="color: #621acf;">Co</span>: Task <span style="color: #0f71bc;">De</span>composition and Skill <span style="color: #621acf;">Co</span>mposition for Zero-Shot Generalization in Long-Horizon 3D Manipulation -->
-              <span style="color: #7dbff2;">R</span><span style="color: #74f369;">o</span><span style="color: #fec02e;">Tri</span>-<span style="color: #dba2ee;">Diff</span>: A Spatial <span style="color: #7dbff2;">R</span>obot–<span style="color: #74f369;">O</span>bject <span style="color: #fec02e;">Tri</span>adic Interaction-Guided <span style="color: #dba2ee;">Diff</span>usion Model for Bimanual Manipulation
+              <span style="color: #7dbff2;">R</span><span style="color: #74f369;">o</span><span style="color: #fec02e;">Tr</span><span style="color: #fec02e;">i</span>-<span style="color: #dba2ee;">Diff</span>: A Spatial <span style="color: #7dbff2;">R</span>obot–<span style="color: #74f369;">O</span>bject <span style="color: #fec02e;">Tr</span>iadic <span style="color: #fec02e;">I</span>nteraction-Guided <span style="color: #dba2ee;">Diff</span>usion Model for Bimanual Manipulation
             </h1>
             <!-- <h3 class="title is-4 conference-authors"><a target="_blank" href="https://iclr.cc/Conferences/2025">ICLR 2025</a></h3> -->
             <h3 class="title is-4 conference-authors"><a target="_blank"><span style="color: #ff8800;">Anonymous Authors</span></a></h3>
@@ -248,7 +248,7 @@ Extensive experiments show that our approach outperforms state-of-the-art baseli
     <div class="rows" style="max-width: 1000px; margin: 0 auto;">
       <!-- <h2 class="title is-3">Video</h2> -->
       <div class="publication-video">
-        <iframe src="static/video/teaser.mp4"
+        <iframe src="static/videos/Introduction.mp4"
                 frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       </div>
     </div>
@@ -419,7 +419,7 @@ Extensive experiments show that our approach outperforms state-of-the-art baseli
         <div class="has-text-centered">
           Evaluated on 4 real-world tasks:
           <div class="select is-small is-rounded" style="margin-bottom: 1rem;">
-            <select id="task-menu" onchange="updateRoTriVideo()">
+            <select id="task-menu" onchange="updateDecoVideo()">
               <option value="lift_basket" selected>lift_basket</option>
               <option value="pick_plate_white">pick_plate_white</option>
               <option value="pick_tomato&banana">pick_tomato&banana</option>
@@ -443,7 +443,7 @@ Extensive experiments show that our approach outperforms state-of-the-art baseli
             "pick_tomato&banana":"Pick Tomato & Banana:Symmetric Coordination",
             "wash_plate_white":"Wash the White Plate:Asynchronous Coordination"
           };
-          function updateRoTriVideo() {
+          function updateDecoVideo() {
             var task = document.getElementById('task-menu').value;
             var video = document.getElementById('rotri-video');
             var source = video.querySelector('source');
@@ -459,7 +459,7 @@ Extensive experiments show that our approach outperforms state-of-the-art baseli
         <div class="has-text-centered">
           Evaluated on 5 real-world tasks:
           <div class="select is-small is-rounded" style="margin-bottom: 1rem;">
-            <select id="gen-task-menu" onchange="updateDecoVideo()">
+            <select id="gen-task-menu" onchange="updateGenVideo()">
               <option value="lift_basket_3" selected>lift_basket</option>
               <option value="lift_basket_3small" selected>lift_basket_small</option>
               <option value="pick_plate_flower">pick_plate_flower</option>
@@ -478,21 +478,21 @@ Extensive experiments show that our approach outperforms state-of-the-art baseli
         <br>
         <h3 id="gen-video-title" class="has-text-centered"><b>Lift Basket:Synchronous Coordination</b></h3>
         <script>
-          var videoTitles = {
-            "lift_basket":"Lift the Basket:Synchronous Coordination",
-            "lift_basket":"Lift the Basket with Smaller Cube:Synchronous Coordination",
-            "pick_plate_white":"Pick the Flowery Plate:Asynchronous Coordination",
-            "pick_tomato&banana":"Pick Dinosaur & Toy Gun:Symmetric Coordination",
-            "wash_plate_white":"Wash the Flowery Plate:Asynchronous Coordination"
+          var GenvideoTitles = {
+            "lift_basket_3":"Lift the Basket:Synchronous Coordination",
+            "lift_basket_3small":"Lift the Basket with Smaller Cube:Synchronous Coordination",
+            "pick_plate_flower":"Pick the Flowery Plate:Asynchronous Coordination",
+            "pick_dinosaur&toy_gun":"Pick Dinosaur & Toy Gun:Symmetric Coordination",
+            "wash_plate_flower":"Wash the Flowery Plate:Asynchronous Coordination"
           };
-          function updateDecoVideo() {
+          function updateGenVideo() {
             var task = document.getElementById('gen-task-menu').value;
             var video = document.getElementById('gen-video');
             var source = video.querySelector('source');
             var title = document.getElementById('gen-video-title');
             source.src = "static/videos/generalised_real_demo_v3/" + task + ".mp4";
             video.load();
-            title.innerHTML = "<b>" + (videoTitles[task] || task) + "</b>";
+            title.innerHTML = "<b>" + (GenvideoTitles[task] || task) + "</b>";
           }
         </script>
 
