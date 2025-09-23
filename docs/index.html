@@ -1,31 +1,26 @@
 <!DOCTYPE html>
 <html>
 
-
 <head>
   <meta charset="utf-8">
   <meta name="description"
     content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
   <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>DeCo</title>
-
+  <title>RoTri-Diff</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
-
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
 
-
     function gtag() {
       dataLayer.push(arguments);
     }
-    
-    gtag('js', new Date());
-    
-    gtag('config', 'G-PYVRSFMDRL');
 
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
   </script>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
@@ -55,25 +50,21 @@
 	    }
 	});
     </script>
-
 </head>
 
 <body>
-
   <style>
     .bold {
       font-weight: bold;
     }
 
-
     .smaller {
       font-size: smaller;
     }
-    
+
     .publication-title {
       font-family: 'Google Sans', sans-serif;
     }
-
   </style>
 
 
@@ -83,12 +74,12 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <h1 class="title is-1 publication-title" style="font-size: 35px;">
-              <span style="color: #0f71bc;">De</span><span style="color: #621acf;">Co</span>: Task <span style="color: #0f71bc;">De</span>composition and Skill <span style="color: #621acf;">Co</span>mposition for Zero-Shot Generalization in Long-Horizon 3D Manipulation
+              <!-- <span style="color: #0f71bc;">De</span><span style="color: #621acf;">Co</span>: Task <span style="color: #0f71bc;">De</span>composition and Skill <span style="color: #621acf;">Co</span>mposition for Zero-Shot Generalization in Long-Horizon 3D Manipulation -->
+              <span style="color: #7dbff2;">R</span><span style="color: #74f369;">o</span><span style="color: #fec02e;">Tri</span>-<span style="color: #dba2ee;">Diff</span>: A Spatial <span style="color: #7dbff2;">R</span>obot–<span style="color: #74f369;">O</span>bject <span style="color: #fec02e;">Tri</span>adic Interaction-Guided <span style="color: #dba2ee;">Diff</span>usion Model for Bimanual Manipulation
             </h1>
             <!-- <h3 class="title is-4 conference-authors"><a target="_blank" href="https://iclr.cc/Conferences/2025">ICLR 2025</a></h3> -->
-            <h3 class="title is-4 conference-authors"><a target="_blank">Anonymous Authors</a></h3>
-
-
+            <h3 class="title is-4 conference-authors"><a target="_blank"><span style="color: #ff8800;">Anonymous Authors</span></a></h3>
+            
             <!-- <div class="is-size-5 publication-authors">
               <span class="author-block">
                 <a href="https://chenyt31.github.io/">Yangtao Chen</a><sup>1†</sup>,</span>
@@ -111,7 +102,7 @@
                 <a href="https://cs.nju.edu.cn/gaoyang/index.htm">Yang Gao</a><sup>1</sup>
               </span>
             </div> -->
-    
+
           <!-- <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>1</sup>Nanjing University, </span>
             <span class="author-block"><sup>2</sup>Shanghai University</span>
@@ -120,7 +111,7 @@
             <span class="author-block"><sup>†</sup>Equal contribution, </span>
             <span class="author-block"><sup><img src="static/images/latter.png" style="height: 1em; vertical-align: middle;"></sup>Corresponding author</span>
           </div> -->
-    
+
              <div class="column has-text-centered">
               <div class="publication-links">
                 <span class="link-block">
@@ -141,7 +132,7 @@
                     <span>Dataset</span>
                   </a>
                 </span>
-                <!-- <span class="link-block">
+                <span class="link-block">
                   <a href="#" 
                      class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
@@ -149,14 +140,13 @@
                     </span>
                     <span>Code (Coming soon)</span>
                   </a>
-                </span> -->
+                </span>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-
   </section>
 
   <section class="hero is-light is-small">
@@ -165,55 +155,55 @@
         <div id="results-carousel" class="carousel results-carousel">
           <div class="item">
             <video poster="" autoplay muted loop height="100%">
-              <source src="static/video/real/on_and_in_different_v1.mp4"
+              <source src="static/videos/processed_real_demo_v3/main_wash_plate_white.mp4"
                       type="video/mp4">
             </video>
           </div>
           <div class="item">
             <video poster="" autoplay muted loop height="100%">
-              <source src="static/video/real/block_exchange_v0.mp4"
+              <source src="static/videos/processed_real_demo_v3/main_lift_basket_2.mp4"
                       type="video/mp4">
             </video>
           </div>
           <div class="item">
             <video poster="" autoplay muted loop height="100%">
-              <source src="static/video/real/put_two_in_different_v2.mp4"
+              <source src="static/videos/processed_real_demo_v3/main_pick_tomato&banana.mp4"
                       type="video/mp4">
             </video>
           </div>
           <div class="item">
             <video poster="" autoplay muted loop height="100%">
-              <source src="static/video/real/put_in_without_close_v3.mp4"
+              <source src="static/videos/processed_real_demo_v3/main_pick_plate_white.mp4"
                       type="video/mp4">
             </video>
           </div>
           <div class="item">
             <video poster="" autoplay muted loop height="100%">
-              <source src="static/video/real/take_out_and_close_v2.mp4"
+              <source src="static/videos/processed_real_demo_v3/lift_basket_3.mp4"
                       type="video/mp4">
             </video>
           </div>
           <div class="item">
             <video poster="" autoplay muted loop height="100%">
-              <source src="static/video/real/take_two_out_of_different_v1.mp4"
+              <source src="static/videos/processed_real_demo_v3/pick_dinosaur&toy_gun.mp4"
                       type="video/mp4">
             </video>
           </div>
           <div class="item">
             <video poster="" autoplay muted loop height="100%">
-              <source src="static/video/real/take_out_without_close_v2.mp4"
+              <source src="static/videos/processed_real_demo_v3/lift_basket_3small.mp4"
                       type="video/mp4">
             </video>
           </div>
           <div class="item">
             <video poster="" autoplay muted loop height="100%">
-              <source src="static/video/real/put_in_and_close_v3.mp4"
+              <source src="static/videos/processed_real_demo_v3/pick_plate_flower.mp4"
                       type="video/mp4">
             </video>
           </div>
           <div class="item">
             <video poster="" autoplay muted loop height="100%">
-              <source src="static/video/real/out_of_different_and_off_v0.mp4"
+              <source src="static/videos/processed_real_demo_v3/wash_plate_flower.mp4"
                       type="video/mp4">
             </video>
           </div>
@@ -225,11 +215,10 @@
   <h2 class="subtitle has-text-centered">
   </br>
   <!-- DeCo: Task Decomposition and Skill Composition for Zero-Shot Generalization in Long-Horizon 3D Manipulation -->
-    <I>DeCo can <span style="font-weight: bold;">zero-shot generalize</span> to novel yet <span style="font-weight: bold;">compositional long-horizon 3D manipulation</span> tasks.</I>
+    <I>RoTri-Diff achieves stable performance on real-world bimanual tasks requiring fine-grained coordination.</I>
   <!-- </br> -->
     <!-- <I>See the videos and demonstrations below for more details.</I> -->
   </h2>
-
 
 
 
@@ -241,27 +230,10 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-                Generalizing language-conditioned multi-task imitation learning (IL)
-                models to novel long-horizon 3D manipulation tasks remains a significant challenge. 
-		To address this, we propose <span style="font-weight: bold; ">DeCo</span> (Task <span style="font-weight: bold; ">De</span>composition and Skill
-                 <span style="font-weight: bold; ">Co</span>mbination), a model-agnostic framework compatible
-                with various multi-task IL models, designed to enhance their zero-shot gener-
-                alization to novel, compositional, long-horizon 3D manipulation tasks. 
-		DeCo first decomposes IL demonstrations into a set of modular atomic tasks based
-                on the physical interaction between the gripper and objects, and constructs an
-                atomic training dataset that enables models to learn a diverse set of reusable
-                atomic skills during imitation learning. At inference time, DeCo leverages a
-                vision-language model (VLM) to parse high-level instructions for long-horizon
-                tasks, retrieve the relevant atomic skills, and dynamically schedule their execution; 
-		a spatially-aware skill-chaining module then ensures smooth, collision-free
-                transitions between sequential skills. We evaluate DeCo in simulation using
-                DeCoBench, a benchmark specifically designed to assess zero-shot generalization
-                of multi-task IL models in compositional long-horizon 3D manipulation. Across three representative IL
-                models—RVT-2, 3DDA, and ARP—DeCo achieves success rate improvements
-                of <span style="font-weight: bold; ">66.67%, 21.53%, and 57.92%</span>, respectively, on 12 novel compositional tasks.
-                Moreover, in real-world experiments, a DeCo-enhanced model trained on only 6
-                atomic tasks successfully completes 9 novel long-horizon tasks, yielding an average 
-		success rate improvement of <span style="font-weight: bold; ">53.33%</span> over the base multi-task IL model.
+              Bimanual manipulation is a fundamental robotic skill that requires continuous and precise coordination between two arms. While imitation learning (IL) is the dominant paradigm for acquiring this capability, existing approaches, whether robot-centric or object-centric, often overlook the dynamic geometric relationship among the two arms and the manipulated object. This limitation frequently leads to inter-arm collisions, unstable grasps, and degraded performance in complex tasks.
+To address this, in this paper we explicitly models the Robot–Object Triadic Interaction <span style="font-weight: bold; ">(RoTri)</span> representation in bimanual systems, by encoding the relative 6D poses between the two arms and the object to capture their spatial triadic relationship and establish continuous triangular geometric constraints.
+Building on this, we further introduce <span style="font-weight: bold; ">RoTri-Diff</span>, a diffusion-based imitation learning framework that combines RoTri constraints with robot keyposes and object motion in a hierarchical diffusion process. This enables the generation of stable, coordinated trajectories and robust execution across different modes of bimanual manipulation.
+Extensive experiments show that our approach outperforms state-of-the-art baselines by <span style="font-weight: bold; ">10.2%</span>  on 11 representative RLBench2 tasks and achieves stable performance on 4 challenging real-world bimanual tasks.
             </p>
           </div>
         </div>
@@ -271,9 +243,7 @@
   <br>
   <br>
 
-
   <div class="container is-max-widescreen">
-
 
     <div class="rows" style="max-width: 1000px; margin: 0 auto;">
       <!-- <h2 class="title is-3">Video</h2> -->
@@ -282,7 +252,6 @@
                 frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       </div>
     </div>
-
   </div>
   </section>
 
@@ -290,22 +259,40 @@
 
 
   <style>
+    .title-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 2rem 0;
+      margin-bottom: 0.5rem;
+    }
+
+    .title-container hr {
+      flex: 1;
+      border: none;
+      border-top: 2px solid #ccc;  /* line thickness + color */
+      margin: 0 1rem;              /* space between line and text */
+    }
+
+    .title-container h2 {
+      margin: 0;
+      font-weight: bold;
+    }
+
     .video-container {
       width: 24%;
       margin: 0 auto;
     }
 
-
     .video-single-container {
       max-width: 28%;
       margin: 0 auto;
     }
-    
+
     video {
       width: 100%;
       height: auto;
     }
-
   </style>
 
   <section class="section">
@@ -313,31 +300,48 @@
       <div class="rows">
         <div class="rows is-centered ">
           <div class="row is-full-width">
-
-
-            <h2 class="title is-3"><span class="dperact">DeCo Overview</span></h2>
+            
+            <div class="title-container">
+              <hr>
+              <h2 class="title is-3"><span class="dperact">Overview</span></h2>
+              <hr>
+            </div>
             
             <div class="content has-text-justified">
             </div>
             <div style="text-align: center;">
-              <img src="static/images/teaser.png" class="interpolation-image" style="width: 85%; height: auto;" />
+              <img src="static/images/teaserv7.png" class="interpolation-image" style="width: 85%; height: auto;" />
             </div>
-    
+
             <p class="content has-text-justified">
-              We introduce DeCo, a model-agnostic framework that enables multi-task imitation learning models to generalize zero-shot to novel long-horizon 3D manipulation tasks by retrieving, scheduling, and chaining atomic skills.
+              We present RoTri-Diff, a diffusion-based framework for bimanual imitation learning that centers on robot–object triadic interaction RoTri. By explicitly modeling and leveraging the relative 6D pose relations between the two arm end-effectors and the manipulated objects, it achieves stable performance on bimanual tasks requiring fine-grained coordination.
             </p>
             </br>
             </br>
-            <h2 class="title is-3"><span class="dperact">Full and half interactions</span></h2>
-            <div style="text-align: center;">
-                <img src="static/images/full_half.png" class="interpolation-image" style="width: 85%; height: auto;" />
+
+            <div class="title-container">
+              <hr>
+              <h2 class="title is-3"><span class="dperact">Method</span></h2>
+              <hr>
             </div>
-            </br>
+
+            <div style="text-align: center;">
+                <img src="static/images/rotriv7.png" class="interpolation-image" style="width: 85%; height: auto;" />
+            </div>
+
+            <p class="content has-text-justified">
+              Overview of RoTri-Diff. 
+              (a) Visual Perception and RoTri Modeling: Extracting the initial object point cloud $F_0$, 3D semantic features $S_t$, and the initial RoTri representation $R_0$ from multi-view observations. 
+              (b) Imitation Learning Guidance Signals: Three complementary signals used for supervision: Keyposes, Object Pointflow, and the RoTri Relationship. 
+              (c) Hierarchical Diffusion Model: The model concurrently predicts object pointflow and autoregressively predicts a future RoTri segment. These predictions then serve as dynamic conditions to guide the denoising and generation of keyposes and continuous actions within a synergistic attention module.
+            </p>
+
+            <!-- </br>
             </br>
             <h2 class="title is-3"><span class="dperact">Method overview</span></h2>
             <div style="text-align: center;">
                 <img src="static/images/method.png" class="interpolation-image" style="width: 85%; height: auto;" />
-            </div>
+            </div> -->
             <!-- <div style="text-align: center;">
               <img src="static/images/method2.png" class="interpolation-image" style="width: 85%; height: auto;" />
             </div>
@@ -350,10 +354,10 @@
             </p>
             </br>
             </br> -->
-    
+
             <!-- <h2 class="title is-3">Interactive Visualization</h2>
             <div class="row">
-    
+
               <div class="columns">
                 <div class="column has-text-centered">
                   Visualize GravMaps for
@@ -367,7 +371,7 @@
                   </div>
                 </div>
               </div>
-    
+
               <div class="columns has-text-centered" style="display: flex; justify-content: center;">
                 <div class="column is-half has-text-centered">
                   <p style="text-align:center;">
@@ -376,7 +380,7 @@
                     </video>
                   </p>
                 </div>
-    
+
                 <div class="columns has-text-centered" id="iframe-container"
                   style="display: flex; justify-content: center;">
                   <div class="column">
@@ -398,219 +402,195 @@
             </div> -->
           </div>
         </div>
-
   </section>
 
 
-
+<!-- <-----------------------Real World Experiments-------------------------------------> 
   <section class="section">
     <div class="container is-max-widescreen">
       <div class="row">
-        <h2 class="title is-3">DeCo Performance on 12 Novel Tasks (36 variations)</h2>
+
+        <div class="title-container">
+              <hr>
+              <h2 class="title is-3"><span class="dperact">RoTri-Diff Real World Experiments</span></h2>
+              <hr>
+        </div>
+        <h2 class="title is-3 has-text-centered"><span class="dperact">Four Main Tasks</span></h2>
         <div class="has-text-centered">
-          <span>
-
-
-            <div class="select is-small" style="display:inline-block; vertical-align:middle;">
-              <select id="overall-menu-models" onchange="updateOverallVideo()">
-                <option value="rvt2" selected="selected">rvt2</option>
-                <option value="3dda">3dda</option>
-                <option value="arp">arp</option>
-              </select>
-            </div>
-            + DeCo, evaluated on 12 novel tasks
-            <div class="select is-small" style="display:inline-block; vertical-align:middle">
-              <select id="overall-menu-tasks" onchange="(function() {
-                const taskSelect = document.getElementById('overall-menu-tasks');
-                const variationSelect = document.getElementById('overall-menu-variations');
-                const selectedTask = taskSelect.value;
-                
-                // 清除现有选项
-                variationSelect.innerHTML = '';
-                
-                let maxVariations = 3; // 默认3个variation
-                
-                if (selectedTask === 'put_two_in_different' || selectedTask === 'take_two_out_of_different') {
-                  maxVariations = 6;
-                } else if (selectedTask === 'box_exchange' || selectedTask === 'sweep_and_drop' || selectedTask === 'retrieve_and_sweep') {
-                  maxVariations = 1;
-                }
-                
-                // 添加新选项
-                for (let i = 1; i <= maxVariations; i++) {
-                  const option = document.createElement('option');
-                  option.value = i;
-                  option.text = i.toString().padStart(2, '0');
-                  if (i === 1) option.selected = true;
-                  variationSelect.appendChild(option);
-                }
-                
-                updateOverallVideo();
-              })();">
-                <option value="put_in_without_close">put in without close</option>
-                <option value="put_in_and_close">put in and close</option>
-                <option value="take_out_without_close">take out without close</option>
-                <option value="take_out_and_close">take out and close</option>
-                <option value="put_two_in_same">put two in same</option>
-                <option value="take_two_out_of_same">take two out of same</option>
-                <option value="put_two_in_different">put two in different</option>
-                <option value="take_two_out_of_different">take two out of different</option>
-                <option value="box_exchange">box exchange</option>
-                <option value="transfer_box">transfer box</option>
-                <option value="sweep_and_drop">sweep and drop</option>
-                <option value="retrieve_and_sweep">retrieve and sweep</option>
-              </select>
-            </div>
-            
-            variation
-            <div class="select is-small" style="display:inline-block; vertical-align:middle;">
-              <select id="overall-menu-variations" onchange="updateOverallVideo()">
-                <option value="1" selected="selected">01</option>
-                <option value="2">02</option>
-                <option value="3">03</option>
-              </select>
-            </div>
-    
-            <script>
-              // 页面加载时初始化
-              (function() {
-                const taskSelect = document.getElementById('overall-menu-tasks');
-                const variationSelect = document.getElementById('overall-menu-variations');
-                const selectedTask = taskSelect.value;
-                
-                // 清除现有选项
-                variationSelect.innerHTML = '';
-                
-                let maxVariations = 3; // 默认3个variation
-                
-                if (selectedTask === 'put_two_in_different' || selectedTask === 'take_two_out_of_different') {
-                  maxVariations = 6;
-                } else if (selectedTask === 'box_exchange' || selectedTask === 'sweep_and_drop' || selectedTask === 'retrieve_and_sweep') {
-                  maxVariations = 1;
-                }
-                
-                // 添加新选项
-                for (let i = 1; i <= maxVariations; i++) {
-                  const option = document.createElement('option');
-                  option.value = i;
-                  option.text = i.toString().padStart(2, '0');
-                  if (i === 1) option.selected = true;
-                  variationSelect.appendChild(option);
-                }
-              })();
-            </script>
-          </span>
-        </div>
-        <br>
-        <br>
-        <!-- <h3 id="novel-video-title" class="has-text-centered"><b>close bottom drawer.</b></h3> -->
-        <br>
-    
-        <div class="columns is-multiline">
-          <div class="column is-half has-text-centered video-container">
-            <span id="vanilla-label" class="has-text-weight-bold">rvt2</span> <!-- Updated label -->
-            <br><br>
-            <video id="vanilla-video" muted autoplay loop>
-              <source src="static/video/rvt2/put_in_without_close_variation_0.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </div>
-    
-          <div class="column is-half has-text-centered video-container">
-            <span id="deco-label" class="has-text-weight-bold">rvt2 + DeCo</span> <!-- Updated label -->
-            <br><br>
-            <video id="deco-video" muted autoplay loop>
-              <source src="static/video/deco_rvt2/put_in_without_close_variation_0.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
+          Evaluated on 4 real-world tasks:
+          <div class="select is-small is-rounded" style="margin-bottom: 1rem;">
+            <select id="task-menu" onchange="updateRoTriVideo()">
+              <option value="lift_basket" selected>lift_basket</option>
+              <option value="pick_plate_white">pick_plate_white</option>
+              <option value="pick_tomato&banana">pick_tomato&banana</option>
+              <option value="wash_plate_white">wash_plate_white</option>
+            </select>
           </div>
         </div>
-        </br>
-        </br>
-        </br>
-        </br>
-    
-        <h2 class="title is-3">DeCo Performance on 9 Novel Real-world Tasks (30 variations)</h2>
-        <div class="row">
-          <div class="columns">
-            <div class="column has-text-centered">
-              RVT-2 + DeCo, evaluated on 9 real-world tasks:
-              <div class="select is-small is-rounded">
-                <select id="single-menu-tasks" onchange="updateSingleVideo()">
-                  <option value="put_in_without_close" selected="selected">put in without close</option>
-                  <option value="put_in_and_close">put in and close</option>
-                  <option value="take_out_without_close">take out without close</option>
-                  <option value="take_out_and_close">take out and close</option>
-                  <option value="put_two_in_different">put two in different</option>
-                  <option value="take_two_out_of_different">take two out of different</option>
-                  <option value="block_exchange">block exchange</option>
-                  <option value="on_and_in_different">on and in different</option>
-                  <option value="out_of_different_and_off">out of different and off</option>
-                </select>
-              </div>
-    
-              <!-- Additional select element for episode -->
-              <span>
-                variation
-                <div class="select is-small" style="display:inline-block; vertical-align:middle;">
-                  <select id="single-menu-instances" onchange="updateSingleVideo()">
-                    <option value="0" selected="selected">01</option>
-                    <option value="1">02</option>
-                    <option value="2">03</option>
-                    <option value="3">04</option>
-                  </select>
-                </div>
-              </span>
-    
-              <script>
-                // 监听任务选择变化
-                document.getElementById('single-menu-tasks').addEventListener('change', function() {
-                  var task = this.value;
-                  var instanceSelect = document.getElementById('single-menu-instances');
-                  var options = instanceSelect.options;
-                  
-                  // 重置所有选项显示
-                  for(var i = 0; i < options.length; i++) {
-                    options[i].style.display = '';
-                  }
-                  
-                  // 如果是block_exchange任务，隐藏3和4选项
-                  if(task === 'block_exchange' || task === 'on_and_in_different') {
-                    options[2].style.display = 'none'; 
-                    options[3].style.display = 'none';
-                  }
-                  
-                  // 如果是out_of_different_and_off任务，只显示第一个选项
-                  if(task === 'out_of_different_and_off') {
-                    for(var i = 1; i < options.length; i++) {
-                      options[i].style.display = 'none';
-                    }
-                  }
-                });
-              </script>
-    
-            </div>
+
+        <div style="display: flex; justify-content: center; align-items: center;">
+          <video id="rotri-video" muted autoplay loop style="max-width: 50%; height: auto;">
+            <source src="static/videos/real_demo_v3/lift_basket.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <br>
+        <h3 id="video-title" class="has-text-centered"><b>Lift Basket:Synchronous Coordination</b></h3>
+        <script>
+          var videoTitles = {
+            "lift_basket":"Lift the Basket:Synchronous Coordination",
+            "pick_plate_white":"Pick the White Plate:Asynchronous Coordination",
+            "pick_tomato&banana":"Pick Tomato & Banana:Symmetric Coordination",
+            "wash_plate_white":"Wash the White Plate:Asynchronous Coordination"
+          };
+          function updateRoTriVideo() {
+            var task = document.getElementById('task-menu').value;
+            var video = document.getElementById('rotri-video');
+            var source = video.querySelector('source');
+            var title = document.getElementById('video-title');
+            source.src = "static/videos/real_demo_v3/" + task + ".mp4";
+            video.load();
+            title.innerHTML = "<b>" + (videoTitles[task] || task) + "</b>";
+          }
+        </script>
+
+        <div style="margin-top: 2rem;">
+        <h2 class="title is-3 has-text-centered"><span class="dperact">Generalization</span></h2>
+        <div class="has-text-centered">
+          Evaluated on 5 real-world tasks:
+          <div class="select is-small is-rounded" style="margin-bottom: 1rem;">
+            <select id="gen-task-menu" onchange="updateDecoVideo()">
+              <option value="lift_basket_3" selected>lift_basket</option>
+              <option value="lift_basket_3small" selected>lift_basket_small</option>
+              <option value="pick_plate_flower">pick_plate_flower</option>
+              <option value="pick_dinosaur&toy_gun">pick_dinosaur&toy_gun</option>
+              <option value="wash_plate_flower">wash_plate_flower</option>
+            </select>
           </div>
-        
-          <div style="display: flex; justify-content: center; align-items: center;">
-            <video id="multi-task-result-video" muted autoplay loop style="max-width: 50%; height: auto;">
-              <source src="static/video/real/put_in_without_close_v0.mp4" type="video/mp4">
-              Your browser does not support the video tag.
+        </div>
+
+        <div style="display: flex; justify-content: center; align-items: center;">
+          <video id="gen-video" muted autoplay loop style="max-width: 50%; height: auto;">
+            <source src="static/videos/generalised_real_demo_v3/lift_basket_3.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <br>
+        <h3 id="gen-video-title" class="has-text-centered"><b>Lift Basket:Synchronous Coordination</b></h3>
+        <script>
+          var videoTitles = {
+            "lift_basket":"Lift the Basket:Synchronous Coordination",
+            "lift_basket":"Lift the Basket with Smaller Cube:Synchronous Coordination",
+            "pick_plate_white":"Pick the Flowery Plate:Asynchronous Coordination",
+            "pick_tomato&banana":"Pick Dinosaur & Toy Gun:Symmetric Coordination",
+            "wash_plate_white":"Wash the Flowery Plate:Asynchronous Coordination"
+          };
+          function updateDecoVideo() {
+            var task = document.getElementById('gen-task-menu').value;
+            var video = document.getElementById('gen-video');
+            var source = video.querySelector('source');
+            var title = document.getElementById('gen-video-title');
+            source.src = "static/videos/generalised_real_demo_v3/" + task + ".mp4";
+            video.load();
+            title.innerHTML = "<b>" + (videoTitles[task] || task) + "</b>";
+          }
+        </script>
+
+      </div>
+    </div>
+  </section>
+<!-- <-----------------------Simulation Experiments-------------------------------------> 
+<section class="section">
+  <div class="container is-max-widescreen">
+    <div class="row">
+      <div class="title-container">
+        <hr>
+        <h2 class="title is-3"><span class="dperact">RoTri-Diff Simulation Experiments</span></h2>
+        <hr>
+      </div>  
+      <h2 class="title is-3 has-text-centered"><span class="dperact">Eleven RLBench2 Tasks</span></h2>
+    </div>
+  </div>
+</section>
+  <section class="hero is-light is-small">
+    <div class="hero-body">
+      <div class="container">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item">
+            <video poster="" autoplay muted loop height="100%">
+              <source src="static/videos/sim_demo_rotri_success/bimanual_dual_push_buttons_0.mp4"
+                      type="video/mp4">
             </video>
           </div>
-          <br>
-          <h3 id="video-title" class="has-text-centered"><b>put the yellow block in the bottom drawer. (success)</b></h3>
-          <!-- Title for the video -->
+          <div class="item">
+            <video poster="" autoplay muted loop height="100%">
+              <source src="static/videos/sim_demo_rotri_success/bimanual_handover_item_0.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" autoplay muted loop height="100%">
+              <source src="static/videos/sim_demo_rotri_success/bimanual_handover_item_easy_1.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" autoplay muted loop height="100%">
+              <source src="static/videos/sim_demo_rotri_success/bimanual_lift_ball_0.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" autoplay muted loop height="100%">
+              <source src="static/videos/sim_demo_rotri_success/bimanual_lift_tray_0.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" autoplay muted loop height="100%">
+              <source src="static/videos/sim_demo_rotri_success/bimanual_pick_laptop_0.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" autoplay muted loop height="100%">
+              <source src="static/videos/sim_demo_rotri_success/bimanual_pick_plate_0.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" autoplay muted loop height="100%">
+              <source src="static/videos/sim_demo_rotri_success/bimanual_push_box_0.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" autoplay muted loop height="100%">
+              <source src="static/videos/sim_demo_rotri_success/bimanual_put_bottle_in_fridge_0.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" autoplay muted loop height="100%">
+              <source src="static/videos/sim_demo_rotri_success/bimanual_put_item_in_drawer_0.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" autoplay muted loop height="100%">
+              <source src="static/videos/sim_demo_rotri_success/bimanual_sweep_to_dustpan_0.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          </div>
         </div>
       </div>
     </div>
-
   </section>
 
-  
 
 
-  <section class="section">
+  <!-- <section class="section">
     <div class="container is-max-widescreen">
       <div class="row">
         <h2 class="title is-3">
@@ -623,11 +603,9 @@
           <a href="https://github.com/DeCo226/DeCo226.github.io/tree/main/docs/static/prompts/half">Prompt Examples (half)</a>
       </div>
     </div>
-  </section>
-
+  </section> -->
 
   <!-- <section class="section" id="BibTeX">
-
   <div class="container is-max-widescreen content">
     <div class="row">
     <h2 class="title">BibTeX</h2>
@@ -639,7 +617,6 @@
     }</code></pre>
   </div>
   </div>
-
 </section> -->
 
 
@@ -660,7 +637,6 @@
       </div>
     </div>
   </footer>
-
 
 </body>
 
